@@ -1,0 +1,6 @@
+# 忽略 .env 文件
+.env
+# 忽略 .idea 文件夹及其所有内容
+.idea/
+# 忽略 ChatWithDatawhale/text/temp 目录及其所有内容
+./text/temp/
