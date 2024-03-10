@@ -2,6 +2,8 @@
 
 ChatWithDataWhale 是一个与 DataWhale 现有仓库和学习内容对话的项目,旨在帮助用户快速找到想学习的内容和可以贡献的内容。
 
+RAG 部分参考魔改自[工业级的微信问答助手茴香豆](https://github.com/InternLM/HuixiangDou/tree/main),欢迎也给他一个 star！
+
 ## 功能特点
 
 - 与 DataWhale 的学习资源进行自然语言交互
