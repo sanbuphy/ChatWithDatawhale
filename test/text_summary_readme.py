@@ -44,7 +44,7 @@ def generate_llm_summary(repo_name, readme_content,model):
     elif model=='moonshot-v1-8k':
        client = openai.OpenAI(api_key=moonapi_key, base_url="https://api.moonshot.cn/v1")
     else:
-       client = openai.OpenAI(api_key=openapi_key, base_url="https://www.xiaoerchaoren.com:8907/g/v1")
+       client = openai.OpenAI(api_key=openapi_key,)
 
 
     response = client.chat.completions.create(
