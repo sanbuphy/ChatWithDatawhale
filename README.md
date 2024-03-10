@@ -16,12 +16,13 @@ ChatWithDataWhale 是一个与 DataWhale 现有仓库和学习内容对话的项
 - Python 3.10 或更高版本
 - 安装所需的 Python 依赖包:
 pip install -r requirements.txt
-
-复制
+- 下载对应的模型 "maidalun1020/bce-embedding-base_v1","maidalun1020/bce-reranker-base_v1"
 
 ## .env 文件配置
 
 为了正常运行项目,您需要在项目根目录下创建一个 `.env` 文件,并配置以下内容:
+
+如果在从Hugging Face下载模型时遇到速度极慢或无法下载的问题，请在.env文件中设置HF_ENDPOINT的值为https://hf-mirror.com。请注意，某些Hugging Face仓库可能需要访问权限（例如Jina Ai）。为此，请注册一个Hugging Face账号，并在.env文件中添加HF_TOKEN。你可以在这里找到并获取你的token。
 
 ```
 # GitHub 访问令牌
@@ -34,6 +35,10 @@ deepseekapi=your_deepseek_api_key
 moonapi=your_moonshot_api_key
 # OpenAI API 密钥
 chatgptapi=your_openai_api_key
+
+HF_HOME='./temp/hf_cache'
+HF_ENDPOINT = 'https://hf-mirror.com'
+HF_TOKEN=
 ```
 
 请将 `your_github_access_token`、`your_deepseek_api_key`、`your_moonshot_api_key` 和 `your_openai_api_key` 替换为您自己的 API 密钥。
@@ -64,7 +69,3 @@ chatgptapi=your_openai_api_key
 ## 致谢
 
 感谢 DataWhale 组织提供了丰富的学习资源!
-
-## 许可证
-
-本项目基于 MIT 许可证进行开源。请查看 `LICENSE` 文件了解详情。
