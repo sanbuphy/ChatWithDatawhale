@@ -59,9 +59,10 @@ HF_TOKEN=
 
 ## 项目结构
 
-- `get_issues_pipeline.py`: 获取 GitHub 仓库 issue 的脚本
-- `test_get_all_repo.py`: 获取 DataWhale 组织下所有仓库的脚本 
-- `text_summary_readme.py`: 利用大语言模型自动总结 README 的脚本
+- `dwchatbot`: 包含了所有 RAG 相关的代码
+- `test`: 获取 GitHub 仓库相关内容的脚本
+- `get_feature.py`: 抽取特征信息，保存在本地向量数据库
+- `main.py`: 基于抽取后的特征数据开始对话
 - `README.md`: 项目说明文档
 
 ## 贡献指南
