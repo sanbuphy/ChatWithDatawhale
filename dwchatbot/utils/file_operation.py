@@ -5,7 +5,7 @@ from langchain_community.document_loaders import (CSVLoader, PyPDFLoader,
                                                   UnstructuredExcelLoader)
 from loguru import logger
 
-class FileOperation:
+class FileOperationTool:
 
     def __init__(self):
         self.image_suffix = ['.jpg', '.jpeg', '.png', '.bmp']
@@ -94,5 +94,5 @@ class FileOperation:
 
 
 if __name__ == '__main__':
-    opr = FileOperation()
+    opr = FileOperationTool()
     print(opr.read('/data2/khj/HuixiangDou/技术交底书.doc'))

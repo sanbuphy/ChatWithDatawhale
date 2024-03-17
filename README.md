@@ -18,7 +18,7 @@ RAG 部分参考魔改自[工业级的微信问答助手茴香豆](https://githu
 - Python 3.10 或更高版本
 - 安装所需的 Python 依赖包:
 pip install -r requirements.txt
-- 下载对应的模型 "maidalun1020/bce-embedding-base_v1","maidalun1020/bce-reranker-base_v1"
+- 能够下载对应的模型 "maidalun1020/bce-embedding-base_v1","maidalun1020/bce-reranker-base_v1"
 
 ## .env 文件配置
 
@@ -35,6 +35,8 @@ TOKEN=your_github_access_token
 deepseekapi=your_deepseek_api_key
 # Moonshot API 密钥
 moonapi=your_moonshot_api_key
+# ZhipuAI API 密钥
+zhipuapi=your_zhipuapi_api_key
 # OpenAI API 密钥
 chatgptapi=your_openai_api_key
 
@@ -50,8 +52,10 @@ HF_TOKEN=
 1. 克隆本仓库到本地
 2. 安装所需的 Python 依赖包
 3. 在 `.env` 文件中配置所需的 API 密钥
-4. 运行 `python text_summary_readme.py` 对仓库的 README 进行自动总结
-5. 运行对话脚本与学习资源进行交互
+4. 运行 `python get_feature.py` 对 repodir 文件夹内的文件进行特征抽取
+5. 运行 `main.py` 进行提问交互
+
+这里为了方便，提供了 `example.zip` 作为预处理后的 README 文件集合，你可以直接把他解压到 `repodir` 文件夹，运行特征抽取后就可以开始交互了！
 
 ## 项目结构
 

@@ -10,7 +10,7 @@ from langchain.vectorstores.faiss import FAISS as Vectorstore
 from langchain_community.vectorstores.utils import DistanceStrategy
 from loguru import logger
 
-from dwchatbot.utils import FileOperation
+from dwchatbot.utils import FileOperationTool
 from dwchatbot.utils import QueryTracker
 from dwchatbot.config import Config 
 
@@ -62,7 +62,7 @@ class Retriever:
         references = []
 
         # add file text to context, until exceed `context_max_length`
-        file_opr = FileOperation()
+        file_opr = FileOperationTool()
         for idx, doc in enumerate(docs):
             chunk = doc.page_content
             chunks.append(chunk)
