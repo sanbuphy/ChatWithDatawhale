@@ -65,6 +65,7 @@ def main(org_name,export_dir,summary_dir,model):
     for id, repo in enumerate(repos):
         repo_name = repo['name']
         readme_path = os.path.join(export_dir, repo_name, 'README.md')
+        repo_url = repo['html_url']
         print(repo_name)
         if os.path.exists(readme_path):
             with open(readme_path, 'r', encoding='utf-8') as file:
@@ -81,6 +82,7 @@ def main(org_name,export_dir,summary_dir,model):
                 with open(summary_file_path, 'w', encoding='utf-8') as summary_file:
                     summary_file.write(f"# {repo_name} Summary\n\n")
                     summary_file.write(summary)
+                    summary_file.write(f"\n\n{repo_name} Github URL: {repo_url}\n\n")
             except openai.OpenAIError as e:
                 summary_file_path = os.path.join(summary_dir, f"{repo_name}_summary风控.md")
                 with open(summary_file_path, 'w', encoding='utf-8') as summary_file:
