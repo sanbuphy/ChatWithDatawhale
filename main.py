@@ -38,7 +38,7 @@ def chat(prompt,model):
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {'role': 'system', 'content': "你现在是一个检索助手，会根据我给你的材料进行问题回答并给出相应出处和内容。请仔细阅读参考材料回答问题，如果材料和问题无关，尝试用你自己的理解来回答问题。如果无法确定答案，直接回答不知道。"},
+            {'role': 'system', 'content': "你现在是一个检索助手，会根据我给你的材料进行问题回答并给出相应出处、内容及出处的 URL。请仔细阅读参考材料回答问题，如果材料和问题无关，尝试用你自己的理解来回答问题。如果无法确定答案，直接回答不知道。"},
             {"role": "user", "content": prompt},
         ]
     )
