@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 为了正常运行项目,您需要在项目根目录下创建一个 `.env` 文件,并配置以下内容:
 
-如果在从Hugging Face下载模型时遇到速度极慢或无法下载的问题，请在.env文件中设置HF_ENDPOINT的值为https://hf-mirror.com。请注意，某些Hugging Face仓库可能需要访问权限（例如Jina Ai）。为此，请注册一个Hugging Face账号，并在.env文件中添加HF_TOKEN。你可以在这里找到并获取你的token。
+如果在从Hugging Face下载模型时遇到速度极慢或无法下载的问题，请在.env文件中设置HF_ENDPOINT的值为[https://hf-mirror.com](https://hf-mirror.com)。请注意，某些Hugging Face仓库可能需要访问权限（例如Jina Ai）。为此，请注册一个Hugging Face账号，并在.env文件中添加HF_TOKEN。你可以在这里找到并获取你的token。
 
 ```
 # GitHub 访问令牌
